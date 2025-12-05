@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
+
 export default function Home() {
   return (
     <div className="w-full bg-black text-white overflow-hidden">
@@ -8,7 +9,10 @@ export default function Home() {
           HERO
       ============================ */}
       <section className="w-full min-h-screen flex items-center justify-center px-6 py-24">
-        <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-14">
+        <div
+          className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-14
+                order-first lg:order-none"
+        >
           {/* LEFT – TEXT */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -26,15 +30,20 @@ export default function Home() {
               <h1 className="text-[#FF7B00]">Deliver.</h1>
             </div>
 
-            <p className="text-gray-300 font-inter text-lg max-w-xl">
-              PashGen builds high-performance websites and digital experiences using
-              modern technologies like{" "}
+            <p
+              className="text-gray-300 font-inter text-base sm:text-lg leading-relaxed 
+               max-w-full sm:max-w-xl 
+               text-left 
+               px-0 sm:px-0"
+            >
+              PashGen builds high-performance websites and digital experiences
+              using modern technologies like{" "}
               <span className="text-[#FFB366] font-semibold">
                 React.js, Next.js, Node.js
               </span>{" "}
               and scalable cloud solutions. From business websites and portfolio
-              designs to complete full-stack applications, every project is built
-              for speed, clarity and long-term reliability.
+              designs to complete full-stack applications, every project is
+              built for speed, clarity, and long-term reliability.
             </p>
 
             <div className="flex flex-wrap items-center gap-4">
@@ -52,7 +61,8 @@ export default function Home() {
               </button>
 
               <p className="text-sm text-gray-400 font-inter">
-                Clear code, modern UI and performance-driven builds for serious brands.
+                Clear code, modern UI and performance-driven builds for serious
+                brands.
               </p>
             </div>
 
@@ -76,70 +86,24 @@ export default function Home() {
           </motion.div>
 
           {/* RIGHT – VISUAL PANEL */}
-         <motion.div
-  initial={{ opacity: 0, x: 40 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  transition={{ duration: 0.7 }}
-  className="flex items-center justify-center"
->
-  <div
-    className="
-      w-[95%] lg:w-full h-[480px]
-      rounded-[30px]
-      bg-gradient-to-b from-[#111111] to-black
-      border border-[#FF7B0050]
-      shadow-[0_0_85px_rgba(255,123,0,0.45)]
-      overflow-hidden flex flex-col
-    "
-  >
-    {/* Header */}
-    <div className="flex items-center justify-between px-8 py-5 border-b border-white/10">
-      <p className="text-sm text-gray-400 font-inter">
-        Featured Full-Stack Project
-      </p>
-      <div className="flex gap-1">
-        <span className="w-2.5 h-2.5 rounded-full bg-[#FF7B00]" />
-        <span className="w-2.5 h-2.5 rounded-full bg-white/40" />
-        <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
-      </div>
-    </div>
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            className="flex items-center justify-center"
+          >
+           <div className="flex-1 flex flex-col lg:flex-row">
+  <video
+    src="/videos/web-showcase.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="w-full h-full object-cover"
+  />
+</div>
 
-    {/* Body */}
-    <div className="flex-1 flex flex-col lg:flex-row">
-      
-      {/* Left Preview Box */}
-      <div className="lg:w-[45%] h-full bg-[#181818] flex items-center justify-center">
-        <div className="w-32 h-32 rounded-2xl bg-gradient-to-tr from-[#FF7B00] via-[#FFB366] to-white shadow-[0_0_45px_rgba(255,123,0,0.7)]" />
-      </div>
-
-      {/* Right Content */}
-      <div className="lg:w-[55%] h-full px-8 py-8 flex flex-col justify-between">
-        <div className="space-y-2">
-          <p className="text-xs uppercase tracking-[0.2em] text-[#FFB366]">
-            Full-Stack Business Platform
-          </p>
-
-          <h3 className="text-2xl font-semibold leading-snug">
-            Responsive Web App with Admin Dashboard
-          </h3>
-
-          <p className="text-sm text-gray-400 leading-relaxed">
-            A full-stack solution including authentication, protected routes,
-            content management and performance-focused UI implemented with
-            React, Next.js and a scalable backend.
-          </p>
-        </div>
-
-        <div className="flex items-center justify-between text-xs text-gray-500 pt-6 border-t border-white/10">
-          <span>React.js • Next.js • Node.js</span>
-          <span className="text-[#FFB366]">View Case Study →</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</motion.div>
-
+          </motion.div>
         </div>
       </section>
 
@@ -154,12 +118,15 @@ export default function Home() {
                 Services
               </p>
               <h2 className="text-3xl md:text-4xl font-outfit font-semibold mt-2">
-                Full-Stack & Frontend Services<br />For Modern Brands
+                Full-Stack & Frontend Services
+                <br />
+                For Modern Brands
               </h2>
             </div>
             <p className="text-gray-400 font-inter max-w-md text-sm">
-              PashGen focuses on building robust, scalable and visually consistent
-              applications backed by solid engineering and thoughtful UI/UX.
+              PashGen focuses on building robust, scalable and visually
+              consistent applications backed by solid engineering and thoughtful
+              UI/UX.
             </p>
           </div>
 
@@ -273,8 +240,8 @@ export default function Home() {
               </h2>
             </div>
             <p className="text-gray-400 font-inter max-w-md text-sm">
-              A clear, structured process that keeps projects on track and aligned
-              with business objectives.
+              A clear, structured process that keeps projects on track and
+              aligned with business objectives.
             </p>
           </div>
 
@@ -342,8 +309,8 @@ export default function Home() {
                 </h2>
               </div>
               <p className="text-gray-400 font-inter max-w-md text-sm">
-                PashGen partners with brands and individuals across multiple domains,
-                bringing technical consistency and visual clarity.
+                PashGen partners with brands and individuals across multiple
+                domains, bringing technical consistency and visual clarity.
               </p>
             </div>
 
@@ -386,8 +353,8 @@ export default function Home() {
                 </h2>
               </div>
               <p className="text-gray-400 font-inter max-w-md text-sm">
-                A snapshot of projects built with React.js, Next.js and full-stack
-                architectures for performance and reliability.
+                A snapshot of projects built with React.js, Next.js and
+                full-stack architectures for performance and reliability.
               </p>
             </div>
 
@@ -428,8 +395,12 @@ export default function Home() {
                       {proj.tag}
                     </span>
                     <h3 className="text-lg font-semibold">{proj.title}</h3>
-                    <p className="text-sm text-gray-300 font-inter">{proj.desc}</p>
-                    <p className="text-xs text-[#FFB366] mt-3">View Case Study →</p>
+                    <p className="text-sm text-gray-300 font-inter">
+                      {proj.desc}
+                    </p>
+                    <p className="text-xs text-[#FFB366] mt-3">
+                      View Case Study →
+                    </p>
                   </div>
                 </motion.article>
               ))}
@@ -453,9 +424,9 @@ export default function Home() {
                 A Technical Partner for Modern Web Experiences
               </h2>
               <p className="text-gray-400 font-inter text-sm mt-4 max-w-xl">
-                PashGen combines solid engineering with thoughtful design to deliver
-                websites and applications that are easy to use, easy to maintain and
-                aligned with business goals.
+                PashGen combines solid engineering with thoughtful design to
+                deliver websites and applications that are easy to use, easy to
+                maintain and aligned with business goals.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">

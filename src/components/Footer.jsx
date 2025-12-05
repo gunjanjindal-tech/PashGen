@@ -70,15 +70,24 @@ export default function Footer() {
           </h3>
           <ul className="space-y-3 text-sm text-gray-400 font-inter">
 
-            <li className="flex gap-3">
-              <Mail className="text-[#FF7B00]" size={18} />
-              contact@pashgen.com
-            </li>
+           <li className="flex gap-3">
+  <Mail className="text-[#FF7B00]" size={18} />
+  <a 
+    href="mailto:contact@pashgen.com" 
+    className="hover:underline"
+  >
+    contact@pashgen.com
+  </a>
+</li>
 
-            <li className="flex gap-3">
-              <Phone className="text-[#FF7B00]" size={18} />
-              +91 8949951116
-            </li>
+
+         <li className="flex gap-3">
+  <Phone className="text-[#FF7B00]" size={18} />
+  <a href="tel:+918949951116" className="hover:underline">
+    +91 8949951116
+  </a>
+</li>
+
 
             <li className="flex gap-3 leading-relaxed">
               <MapPin className="text-[#FF7B00]" size={18} />
