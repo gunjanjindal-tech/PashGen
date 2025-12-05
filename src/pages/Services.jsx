@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 export default function Services() {
   const services = [
@@ -171,16 +173,20 @@ export default function Services() {
               </p>
             </div>
 
-            <button
-              className="
-                px-8 py-3 rounded-full bg-[#FF7B00]
-                text-white font-inter text-sm tracking-wide uppercase
-                shadow-[0_0_24px_rgba(255,123,0,0.65)]
-                self-start
-              "
-            >
-              Start Project →
-            </button>
+            <Link
+  to="/start-project"
+  className="
+    inline-flex items-center gap-2
+    px-7 py-3 rounded-full
+    bg-[#FF7B00]
+    text-white font-inter text-sm tracking-wide uppercase
+    shadow-[0_0_24px_rgba(255,123,0,0.65)]
+  "
+>
+  Start Your Project
+  <ArrowRight size={18} />
+</Link>
+
           </div>
         </section>
 

@@ -1,8 +1,29 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 
 export default function Home() {
+
+const projects = [
+  {
+    tag: "React Website",
+    title: "Wizard India – Sound & Audiotone Equipment Website",
+    desc: "A modern React website featuring smooth routing, EmailJS forms, Framer Motion animations and polished UI interactions.",
+    image: "/projects/wizard.png",
+    link: "https://wizard-india.vercel.app/"
+  },
+  {
+    tag: "Portfolio Website",
+    title: "Gunjan Jindal – Personal Portfolio",
+    desc: "A premium personal portfolio showcasing skills, services and selected work with clean UI and motion effects.",
+    image: "/projects/portfolio.png",
+    link: "https://gunjan-jindal-portfolio.vercel.app/"
+  }
+];
+
+
+  
   return (
     <div className="w-full bg-black text-white overflow-hidden">
       {/* ===========================
@@ -30,37 +51,27 @@ export default function Home() {
               <h1 className="text-[#FF7B00]">Deliver.</h1>
             </div>
 
-            <p
-              className="text-gray-300 font-inter text-base sm:text-lg leading-relaxed 
-               max-w-full sm:max-w-xl 
-               text-left 
-               px-0 sm:px-0"
-            >
-              PashGen builds high-performance websites and digital experiences
-              using modern technologies like{" "}
-              <span className="text-[#FFB366] font-semibold">
-                React.js, Next.js, Node.js
-              </span>{" "}
-              and scalable cloud solutions. From business websites and portfolio
-              designs to complete full-stack applications, every project is
-              built for speed, clarity, and long-term reliability.
-            </p>
+           <p className="text-gray-300 font-inter text-base sm:text-lg leading-relaxed max-w-full sm:max-w-xl text-left px-0 sm:px-0">
+PashGen develops high-performance websites and full-stack applications using React.js, Next.js and modern cloud stacks. With multiple  projects and 95+ performance scores, we deliver fast, clean and scalable solutions for businesses and creators.
+</p>
 
-            <div className="flex flex-wrap items-center gap-4">
-              <button
-                className="
-                  inline-flex items-center gap-2
-                  px-7 py-3 rounded-full
-                  bg-[#FF7B00]
-                  text-white font-inter text-sm tracking-wide uppercase
-                  shadow-[0_0_24px_rgba(255,123,0,0.65)]
-                "
-              >
-                Start Your Project
-                <ArrowRight size={18} />
-              </button>
 
-              <p className="text-sm text-gray-400 font-inter">
+            <div className="flex flex-wrap items-center gap-2">
+<Link
+  to="/start-project"
+  className="
+    inline-flex items-center gap-2
+    px-7 py-3 rounded-full
+    bg-[#FF7B00]
+    text-white font-inter text-sm tracking-wide uppercase
+    shadow-[0_0_24px_rgba(255,123,0,0.65)]
+  "
+>
+  Start Your Project
+  <ArrowRight size={18} />
+</Link>
+
+              <p className="text-sm text-gray-400 font-inter pt-2">
                 Clear code, modern UI and performance-driven builds for serious
                 brands.
               </p>
@@ -86,24 +97,27 @@ export default function Home() {
           </motion.div>
 
           {/* RIGHT – VISUAL PANEL */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
-            className="flex items-center justify-center"
-          >
-           <div className="flex-1 flex flex-col lg:flex-row">
+  <motion.div
+  initial={{ opacity: 0, x: 40 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.7 }}
+  className="relative w-full h-full flex items-center justify-center"
+>
   <video
     src="/videos/web-showcase.mp4"
     autoPlay
     loop
     muted
     playsInline
-    className="w-full h-full object-cover"
+    className="
+      absolute inset-0 
+      w-full h-full 
+      object-cover 
+      opacity-70 
+    "
   />
-</div>
+</motion.div>
 
-          </motion.div>
         </div>
       </section>
 
@@ -342,70 +356,74 @@ export default function Home() {
           </div>
 
           {/* Projects */}
-          <div>
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-              <div>
-                <p className="text-sm tracking-[0.3em] uppercase text-[#FFB366]">
-                  Selected Work
-                </p>
-                <h2 className="text-3xl md:text-4xl font-outfit font-semibold mt-2">
-                  React & Next.js Projects by PashGen
-                </h2>
-              </div>
-              <p className="text-gray-400 font-inter max-w-md text-sm">
-                A snapshot of projects built with React.js, Next.js and
-                full-stack architectures for performance and reliability.
-              </p>
-            </div>
+        <div>
+  <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+    <div>
+      <p className="text-sm tracking-[0.3em] uppercase text-[#FFB366]">
+        Selected Work
+      </p>
+      <h2 className="text-3xl md:text-4xl font-outfit font-semibold mt-2">
+     Website Projects by PashGen
+      </h2>
+    </div>
+    <p className="text-gray-400 font-inter max-w-md text-sm">
+      A snapshot of projects built with React.js, Next.js and
+      full-stack architectures for performance and reliability.
+    </p>
+  </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-              {[
-                {
-                  tag: "Next.js Website",
-                  title: "Corporate Service Website",
-                  desc: "Server-rendered pages with clean layouts, strong branding and SEO-oriented structure.",
-                },
-                {
-                  tag: "Full-Stack Platform",
-                  title: "Admin Dashboard & API",
-                  desc: "Role-based access, dashboards, analytics and custom endpoints for daily operations.",
-                },
-                {
-                  tag: "Portfolio Website",
-                  title: "Personal Brand Portfolio",
-                  desc: "Minimal, responsive portfolio designed to highlight work, skills and services clearly.",
-                },
-              ].map((proj, idx) => (
-                <motion.article
-                  key={idx}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: idx * 0.08 }}
-                  className="
-                    rounded-2xl overflow-hidden
-                    bg-[#080808]
-                    border border-[#262626]
-                    shadow-[0_0_32px_rgba(0,0,0,0.7)]
-                    flex flex-col
-                  "
-                >
-                  <div className="h-40 bg-gradient-to-tr from-[#FF7B00] via-[#FFB366] to-black" />
-                  <div className="p-6 space-y-3">
-                    <span className="inline-block text-xs uppercase tracking-[0.2em] text-[#FFB366]">
-                      {proj.tag}
-                    </span>
-                    <h3 className="text-lg font-semibold">{proj.title}</h3>
-                    <p className="text-sm text-gray-300 font-inter">
-                      {proj.desc}
-                    </p>
-                    <p className="text-xs text-[#FFB366] mt-3">
-                      View Case Study →
-                    </p>
-                  </div>
-                </motion.article>
-              ))}
-            </div>
-          </div>
+  {/* ✅ RIGHT GRID CONTAINER */}
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+
+    {projects.map((proj, idx) => (
+      <motion.article
+        key={idx}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: idx * 0.08 }}
+        className="
+          rounded-2xl overflow-hidden
+          bg-[#080808]
+          border border-[#262626]
+          shadow-[0_0_32px_rgba(0,0,0,0.7)]
+          flex flex-col hover:scale-[1.02] transition-all duration-300
+        "
+      >
+        {/* PROJECT IMAGE */}
+        <div className="w-full h-48 overflow-hidden">
+          <img
+            src={proj.image}
+            className="w-full h-full object-cover"
+            alt={proj.title}
+          />
+        </div>
+
+        {/* TEXT CONTENT */}
+        <div className="p-6 space-y-3">
+          <span className="inline-block text-xs uppercase tracking-[0.2em] text-[#FFB366]">
+            {proj.tag}
+          </span>
+
+          <h3 className="text-lg font-semibold">{proj.title}</h3>
+
+          <p className="text-sm text-gray-300 font-inter">{proj.desc}</p>
+
+          {proj.link && (
+            <a
+              href={proj.link}
+              target="_blank"
+              className="text-xs text-[#FFB366] mt-3 inline-block"
+            >
+              View Case Study →
+            </a>
+          )}
+        </div>
+      </motion.article>
+    ))}
+
+  </div>
+</div>
+
         </div>
       </section>
 
@@ -465,17 +483,19 @@ export default function Home() {
                   technical approach, timeline and execution plan.
                 </p>
               </div>
-              <button
-                className="
-                  px-8 py-3 rounded-full
-                  bg-[#FF7B00]
-                  text-white font-inter text-sm tracking-wide uppercase
-                  shadow-[0_0_24px_rgba(255,123,0,0.65)]
-                  self-start
-                "
-              >
-                Get Started
-              </button>
+              <Link
+  to="/start-project"
+  className="
+    px-8 py-3 rounded-full
+    bg-[#FF7B00]
+    text-white font-inter text-sm tracking-wide uppercase
+    shadow-[0_0_24px_rgba(255,123,0,0.65)]
+    self-start
+  "
+>
+  Get Started
+</Link>
+
             </div>
           </div>
         </div>

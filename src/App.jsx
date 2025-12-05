@@ -9,11 +9,14 @@ import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import StartProject from "./pages/StartProject";
 import WhatsappFloat from "./components/WhatsappFloat";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   return (
     <Router>
-      <Header/>
+        <ScrollToTop />
+      <Header />
+     
       <Routes>
 
         {/* HOME */}

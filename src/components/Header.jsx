@@ -18,10 +18,11 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         
         {/* LOGO */}
-        <h1 className="text-2xl font-outfit font-semibold tracking-wide">
-          <span className="text-white">Pash</span>
-          <span className="text-[#FF7B00]">Gen</span>
-        </h1>
+     <Link to="/" className="text-2xl font-outfit font-semibold tracking-wide">
+  <span className="text-white">Pash</span>
+  <span className="text-[#FF7B00]">Gen</span>
+</Link>
+
 
         {/* DESKTOP MENU */}
         <nav className="hidden md:flex items-center gap-10">
