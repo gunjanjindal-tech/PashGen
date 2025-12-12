@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import { HeadProvider, Title, Meta } from "react-head";
+
 
 export default function StartProject() {
   const [form, setForm] = useState({
@@ -79,6 +81,33 @@ export default function StartProject() {
   };
 
   return (
+    <>
+  <Title>Start Your Website Project – PashGen | Get Quote & Timeline</Title>
+
+  <Meta
+    name="description"
+    content="Start your website project with PashGen. Get a clear roadmap, pricing, timeline and technical consultation for business websites, portfolio sites, dashboards, React/Next.js applications and custom web solutions."
+  />
+
+  <Meta
+    name="keywords"
+    content="
+      start website project, website project quote, hire website developer, hire React developer,
+      hire Next.js developer, website development cost, website project form, start web development,
+      business website development quote, portfolio website quote, dashboard development quote,
+      full stack development quote, custom website pricing, web application cost estimate,
+      modern website development services, website agency contact, start project online
+    "
+  />
+
+  <Meta property="og:title" content="Start Your Project – PashGen" />
+  <Meta property="og:description" content="Tell us about your project and get a tailored roadmap, pricing and timeline for websites, dashboards and full-stack applications." />
+  <Meta property="og:url" content="https://www.pashgen.com/start-project" />
+  <Meta property="og:type" content="website" />
+
+  <Meta name="author" content="PashGen" />
+
+
     <div className="w-full bg-black text-white pt-32 px-6 pb-24">
       <div className="max-w-5xl mx-auto space-y-16">
 
@@ -249,6 +278,7 @@ export default function StartProject() {
           )}
         </motion.form>
       </div>
-    </div>
+      </div>
+      </>
   );
 }

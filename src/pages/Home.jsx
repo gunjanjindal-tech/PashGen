@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Title, Meta } from "react-head";
 
 
 export default function Home() {
@@ -25,6 +26,30 @@ const projects = [
 
   
   return (
+
+    <>
+<>
+  <Title>PashGen – Website Development, React, Next.js, Branding & UI/UX Design</Title>
+
+  <Meta
+    name="description"
+    content="PashGen specializes in modern website development using React, Next.js, Vite, Tailwind, Node.js, and MongoDB. We also offer UI/UX design, branding, landing pages, automations and high-performance digital solutions."
+  />
+
+  <Meta
+    name="keywords"
+    content="React development,React Websites, React.js Websites, Next.js development,Next.js website, Vite websites, UI/UX design, Tailwind CSS, website design Jaipur, branding agency, custom websites, landing pages, Node.js development, MongoDB developer"
+  />
+
+  <Meta property="og:title" content="PashGen – React & Next.js Website Development + Branding" />
+  <Meta property="og:description" content="Modern websites built using React, Next.js, Vite, Tailwind, and premium UI/UX design." />
+  <Meta property="og:url" content="https://www.pashgen.com/" />
+  <Meta property="og:type" content="website" />
+
+  <Meta name="author" content="PashGen" />
+</>
+
+
     <div className="w-full bg-black text-white overflow-hidden">
       {/* ===========================
           HERO
@@ -104,7 +129,7 @@ PashGen develops high-performance websites and full-stack applications using Rea
   className="relative w-full h-full flex items-center justify-center"
 >
   <video
-    src="/videos/web-showcase.mp4"
+    src="https://res.cloudinary.com/dy4vqfwmi/video/upload/v1765539313/web-showcase_ft3wzi.mp4"
     autoPlay
     loop
     muted
@@ -355,74 +380,74 @@ PashGen develops high-performance websites and full-stack applications using Rea
             </div>
           </div>
 
-          {/* Projects */}
-        <div>
-  <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-    <div>
-      <p className="text-sm tracking-[0.3em] uppercase text-[#FFB366]">
-        Selected Work
+{/* ===========================
+    DEVELOPMENT PRINCIPLES (LIKE INDUSTRIES)
+=========================== */}
+<section className="w-full py-20 px-6 border-t border-white/5">
+  <div className="max-w-6xl mx-auto space-y-12">
+
+    {/* TOP ROW — LEFT HEADING + RIGHT DESCRIPTION */}
+    <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+      <div>
+        <p className="text-sm tracking-[0.3em] uppercase text-[#FFB366]">
+          Our Development Principles
+        </p>
+
+        <h2 className="text-3xl md:text-4xl font-outfit font-semibold mt-2">
+          Engineering Websites Built to Perform
+        </h2>
+      </div>
+
+      <p className="text-gray-400 font-inter max-w-md text-sm">
+        Every project we build follows a strong foundation of performance,
+        clean engineering and long-term scalability — ensuring your website
+        stays fast, stable and future-ready.
       </p>
-      <h2 className="text-3xl md:text-4xl font-outfit font-semibold mt-2">
-     Website Projects by PashGen
-      </h2>
     </div>
-    <p className="text-gray-400 font-inter max-w-md text-sm">
-      A snapshot of projects built with React.js, Next.js and
-      full-stack architectures for performance and reliability.
-    </p>
-  </div>
 
-  {/* ✅ RIGHT GRID CONTAINER */}
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+    {/* GRID CARDS */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-    {projects.map((proj, idx) => (
-      <motion.article
-        key={idx}
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: idx * 0.08 }}
-        className="
-          rounded-2xl overflow-hidden
-          bg-[#080808]
-          border border-[#262626]
-          shadow-[0_0_32px_rgba(0,0,0,0.7)]
-          flex flex-col hover:scale-[1.02] transition-all duration-300
-        "
-      >
-        {/* PROJECT IMAGE */}
-        <div className="w-full h-48 overflow-hidden">
-          <img
-            src={proj.image}
-            className="w-full h-full object-cover"
-            alt={proj.title}
-          />
-        </div>
+      {[
+        {
+          title: "Clean, Modern Codebase",
+          desc: "Reusable components, scalable architecture and optimized workflows ensure your website stays maintainable for years."
+        },
+        {
+          title: "High Performance & SEO",
+          desc: "We use Next.js, React and cloud deployment to deliver fast load times and strong search performance."
+        },
+        {
+          title: "Future-Ready Technology",
+          desc: "From APIs to authentication and cloud hosting, we build with modern tools that support long-term growth."
+        }
+      ].map((item, idx) => (
+        <motion.div
+          key={idx}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: idx * 0.08 }}
+          className="
+            p-8 rounded-2xl bg-[#080808]
+            border border-[#262626]
+            shadow-[0_0_32px_rgba(0,0,0,0.7)]
+            space-y-3 hover:scale-[1.02]
+            transition-all duration-300
+          "
+        >
+          <p className="text-xs uppercase tracking-[0.3em] text-[#FFB366]">
+            {idx + 1 < 10 ? `0${idx + 1}` : idx + 1}
+          </p>
 
-        {/* TEXT CONTENT */}
-        <div className="p-6 space-y-3">
-          <span className="inline-block text-xs uppercase tracking-[0.2em] text-[#FFB366]">
-            {proj.tag}
-          </span>
+          <h3 className="text-lg font-semibold">{item.title}</h3>
+          <p className="text-sm text-gray-300 font-inter">{item.desc}</p>
+        </motion.div>
+      ))}
 
-          <h3 className="text-lg font-semibold">{proj.title}</h3>
-
-          <p className="text-sm text-gray-300 font-inter">{proj.desc}</p>
-
-          {proj.link && (
-            <a
-              href={proj.link}
-              target="_blank"
-              className="text-xs text-[#FFB366] mt-3 inline-block"
-            >
-              View Case Study →
-            </a>
-          )}
-        </div>
-      </motion.article>
-    ))}
+    </div>
 
   </div>
-</div>
+</section>
 
         </div>
       </section>
@@ -430,20 +455,20 @@ PashGen develops high-performance websites and full-stack applications using Rea
       {/* ===========================
           WHY PashGen + CTA
       ============================ */}
-      <section className="w-full py-20 px-6 border-t border-white/10">
+      <section className="w-full pb-20 px-6">
         <div className="max-w-6xl mx-auto space-y-12">
           {/* Why PashGen */}
           <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-10">
             <div>
               <p className="text-sm tracking-[0.3em] uppercase text-[#FFB366]">
-                Why PashGen
+               Why Clients Choose PashGen
               </p>
               <h2 className="text-3xl md:text-4xl font-outfit font-semibold mt-2">
                 A Technical Partner for Modern Web Experiences
               </h2>
               <p className="text-gray-400 font-inter text-sm mt-4 max-w-xl">
                 PashGen combines solid engineering with thoughtful design to
-                deliver websites and applications that are easy to use, easy to
+                deliver websites that are easy to use, easy to
                 maintain and aligned with business goals.
               </p>
 
@@ -500,6 +525,8 @@ PashGen develops high-performance websites and full-stack applications using Rea
           </div>
         </div>
       </section>
-    </div>
+      </div>
+      </>
   );
 }
+      

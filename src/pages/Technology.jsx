@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Title, Meta } from "react-head";
 
 export default function Technology() {
   const techStack = [
@@ -19,6 +20,34 @@ export default function Technology() {
   ];
 
   return (
+    <>
+  <Title>Technology Stack – React, Next.js, Node.js, Tailwind, Cloud | PashGen</Title>
+
+  <Meta
+    name="description"
+    content="Explore PashGen's full technology stack including React.js, Next.js, Node.js, Express, Tailwind CSS, MongoDB, SQL, REST APIs, authentication systems and cloud deployment on Vercel, Netlify and AWS."
+  />
+
+  <Meta
+    name="keywords"
+    content="
+      web development technologies, React tech stack, Next.js tech stack,
+      Node.js backend development, modern frontend development, Tailwind websites,
+      MongoDB developer, SQL databases, REST API development,
+      authentication systems, cloud deployment Vercel, AWS deployment,
+      website technology stack, full stack development technologies,
+      frontend backend tools, modern web tech stack, scalable web development tools
+    "
+  />
+
+  <Meta property="og:title" content="PashGen Technology Stack – Modern Web Development Tools" />
+  <Meta property="og:description" content="Discover the technologies we use to build fast, scalable, secure and modern websites & applications — including React, Next.js, Node.js, Tailwind, and cloud deployment platforms." />
+  <Meta property="og:url" content="https://www.pashgen.com/technology" />
+  <Meta property="og:type" content="website" />
+
+  <Meta name="author" content="PashGen" />
+
+
     <div className="w-full bg-black text-white pt-32 px-6 pb-24">
       <div className="max-w-6xl mx-auto space-y-24">
 
@@ -168,6 +197,7 @@ export default function Technology() {
         </section>
 
       </div>
-    </div>
+      </div>
+      </>
   );
 }

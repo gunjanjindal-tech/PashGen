@@ -10,9 +10,11 @@ import Footer from "./components/Footer";
 import StartProject from "./pages/StartProject";
 import WhatsappFloat from "./components/WhatsappFloat";
 import ScrollToTop from "./components/ScrollToTop";
+import { HeadProvider } from "react-head";
 
 export default function App() {
   return (
+    <HeadProvider>
     <Router>
         <ScrollToTop />
       <Header />
@@ -32,6 +34,7 @@ export default function App() {
       </Routes>
       <Footer />
       <WhatsappFloat />  
-    </Router>
+      </Router>
+      </HeadProvider>
   );
 }

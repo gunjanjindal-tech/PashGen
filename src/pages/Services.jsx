@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { Title, Meta } from "react-head";
+
 
 export default function Services() {
   const services = [
@@ -48,6 +50,33 @@ export default function Services() {
   ];
 
   return (
+    <>
+  <Title>PashGen Services – Website Development, React, Next.js, UI/UX & Business Websites</Title>
+
+  <Meta
+    name="description"
+    content="Explore PashGen’s services including full-stack website development, React & Next.js engineering, business websites, portfolio websites, admin dashboards, backend APIs and secure cloud deployment."
+  />
+
+  <Meta
+    name="keywords"
+    content="
+      website development services, business website development, React development services, Next.js development,
+      portfolio website developer, admin dashboard development, full stack website development, backend API development,
+      custom website design, corporate website development, UI UX design services, scalable website development,coding websites,
+      professional website design for business, website development company, modern website design services,
+      fast responsive websites, web application development services, Node.js development services, MongoDB developer
+    "
+  />
+
+  <Meta property="og:title" content="PashGen – Professional Website Development & Digital Services" />
+  <Meta property="og:description" content="We build modern websites, business platforms, dashboards and full-stack applications using React, Next.js, Vite, Tailwind and secure backend architectures." />
+  <Meta property="og:url" content="https://www.pashgen.com/services" />
+  <Meta property="og:type" content="website" />
+
+  <Meta name="author" content="PashGen" />
+
+
     <div className="w-full bg-black text-white pt-32 px-6 pb-24">
       <div className="max-w-6xl mx-auto space-y-24">
 
@@ -191,6 +220,7 @@ export default function Services() {
         </section>
 
       </div>
-    </div>
+      </div>
+      </>
   );
 }

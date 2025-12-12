@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Search, PenTool, Code, Rocket } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { Title, Meta } from "react-head";
+
 
 export default function Process() {
   const steps = [
@@ -43,6 +45,37 @@ export default function Process() {
   ];
 
   return (
+
+    <>
+  <Title>PashGen Process – How We Build Modern Web Experiences</Title>
+
+  <Meta
+    name="description"
+    content="Explore PashGen's web development process including discovery, UI/UX planning, frontend + backend development, deployment, testing, cloud hosting, and 3 months free support."
+  />
+
+ <Meta
+  name="keywords"
+  content="
+    website development process, web development workflow, website creation steps, 
+    UI UX design process, website planning, web development company process, 
+    modern website development, step by step website development,
+    React development process, Next.js development workflow, 
+    frontend backend development steps, custom website development workflow,
+    how agencies build websites, web app development cycle,
+    cloud deployment process, Vercel deployment, AWS deployment
+  "
+/>
+
+  <Meta property="og:title" content="PashGen – Our Web Development Process" />
+  <Meta property="og:description" content="A transparent 4-step workflow: Discovery, UI/UX, Development, and Launch with support. Built using React, Next.js, Vite, Tailwind, and modern tech." />
+  <Meta property="og:url" content="https://www.pashgen.com/process" />
+  <Meta property="og:type" content="website" />
+
+  <Meta name="author" content="PashGen" />
+
+
+    
     <div className="w-full bg-black text-white pt-32 px-6 pb-24">
       <div className="max-w-6xl mx-auto space-y-24">
 
@@ -216,6 +249,7 @@ export default function Process() {
         </section>
 
       </div>
-    </div>
+      </div>
+      </>
   );
 }
