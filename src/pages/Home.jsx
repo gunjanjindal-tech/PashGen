@@ -128,23 +128,18 @@ PashGen develops high-performance websites and full-stack applications using Rea
   transition={{ duration: 0.7 }}
   className="relative w-full h-[320px] sm:h-full flex items-center justify-center"
 >
-  <video
-    src="https://res.cloudinary.com/dy4vqfwmi/video/upload/v1765539313/web-showcase_ft3wzi.mp4"
-    autoPlay
-    loop
-    muted
-    playsInline
-    webkit-playsinline="true"
-    x5-playsinline="true"
-    preload="auto"
-    className="
-      absolute inset-0 
-      w-full h-full 
-      object-cover 
-      opacity-70
-      pointer-events-none
-    "
-  />
+ <video
+  src="https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,vc_h264,q_auto/v1765539313/web-showcase_ft3wzi.mp4"
+  autoPlay
+  muted
+  loop
+  playsInline
+  webkit-playsinline="true"
+  x5-playsinline="true"
+  preload="auto"
+  className="absolute inset-0 w-full h-full object-cover opacity-70 pointer-events-none"
+/>
+
 </motion.div>
 
         </div>
