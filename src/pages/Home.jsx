@@ -122,11 +122,11 @@ PashGen develops high-performance websites and full-stack applications using Rea
           </motion.div>
 
           {/* RIGHT – VISUAL PANEL */}
-  <motion.div
+<motion.div
   initial={{ opacity: 0, x: 40 }}
   whileInView={{ opacity: 1, x: 0 }}
   transition={{ duration: 0.7 }}
-  className="relative w-full h-full flex items-center justify-center"
+  className="relative w-full h-[320px] sm:h-full flex items-center justify-center"
 >
   <video
     src="https://res.cloudinary.com/dy4vqfwmi/video/upload/v1765539313/web-showcase_ft3wzi.mp4"
@@ -134,11 +134,15 @@ PashGen develops high-performance websites and full-stack applications using Rea
     loop
     muted
     playsInline
+    webkit-playsinline="true"
+    x5-playsinline="true"
+    preload="auto"
     className="
       absolute inset-0 
       w-full h-full 
       object-cover 
-      opacity-70 
+      opacity-70
+      pointer-events-none
     "
   />
 </motion.div>
