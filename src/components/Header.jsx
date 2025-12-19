@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Header() {
   const [open, setOpen] = useState(false);
 
-    const navLinks = [
+  const navLinks = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
     { name: "Technology", href: "/technology" },
@@ -14,79 +14,82 @@ export default function Header() {
   ];
 
   return (
-    <header className="w-full fixed top-0 left-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/5">
-      <div className="max-w-7xl  mx-auto  py-4 flex items-center justify-between">
-        
+    <header className="
+      fixed top-0 left-0 w-full z-50
+      bg-black/80 backdrop-blur-md
+      border-b border-white/5
+      h-[72px]
+    ">
+      <div className="
+        max-w-7xl mx-auto h-full
+        px-6 flex items-center justify-between
+      ">
         {/* LOGO */}
-     <Link to="/" className="text-2xl font-outfit font-semibold tracking-wide">
-  <span className="text-white">Pash</span>
-  <span className="text-[#FF7B00]">Gen</span>
-</Link>
+        <Link to="/" className="flex items-center gap-2 text-2xl font-semibold">
+          <img src="/favicon.png" className="w-8 h-8" />
+          <span>
+            <span className="text-white">Pash</span>
+            <span className="text-[#FF7B00]">Gen</span>
+          </span>
+        </Link>
 
-
-        {/* DESKTOP MENU */}
-        <nav className="hidden md:flex items-center gap-10">
-          {navLinks.map((link, idx) => (
-            <a
-              key={idx}
-              href={link.href}
-              className="
-                text-sm text-gray-300 font-inter 
-                hover:text-[#FFB366] transition
-              "
+        {/* DESKTOP NAV (ONLY ≥ 951px) */}
+        <nav className="hidden min-[951px]:flex items-center gap-10">
+          {navLinks.map((link, i) => (
+            <Link
+              key={i}
+              to={link.href}
+              className="text-sm text-gray-300 hover:text-[#FFB366]"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
 
-      <Link to="/start-project">
-  <button
-    className="
-      px-6 py-2 rounded-full bg-[#FF7B00]
-      text-sm text-white font-inter uppercase tracking-wide
-      shadow-[0_0_18px_rgba(255,123,0,0.6)]
-      hover:bg-[#ff8e22] transition
-    "
-  >
-    Start Project
-  </button>
-</Link>
+          <Link to="/start-project">
+            <button className="
+              px-6 py-2 rounded-full bg-[#FF7B00]
+              text-sm text-white uppercase
+              shadow-[0_0_18px_rgba(255,123,0,0.6)]
+            ">
+              Start Project
+            </button>
+          </Link>
         </nav>
 
-        {/* MOBILE MENU BUTTON */}
+        {/* HAMBURGER (≤ 950px) */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-white"
+          className="min-[951px]:hidden text-white"
         >
           {open ? <X size={26} /> : <Menu size={26} />}
         </button>
       </div>
 
-      {/* MOBILE MENU DROPDOWN */}
+      {/* MOBILE / TABLET MENU */}
       {open && (
-        <div className="md:hidden bg-black border-t border-white/5">
-          <div className="flex flex-col gap-4 px-6 py-4">
-            {navLinks.map((link, idx) => (
-              <a
-                key={idx}
-                href={link.href}
-                className="text-gray-300 font-inter text-sm py-1"
+        <div className="min-[951px]:hidden bg-black border-t border-white/5">
+          <div className="px-6 py-6 flex flex-col gap-4">
+            {navLinks.map((link, i) => (
+              <Link
+                key={i}
+                to={link.href}
                 onClick={() => setOpen(false)}
+                className="text-gray-300 text-sm"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
 
-            <button
-              className="
-                px-6 py-2 rounded-full bg-[#FF7B00]
-                text-sm text-white font-inter uppercase tracking-wide
+            <Link to="/start-project">
+              <button className="
+                mt-2 px-6 py-2 rounded-full bg-[#FF7B00]
+                text-sm text-white uppercase
                 shadow-[0_0_18px_rgba(255,123,0,0.6)]
                 self-start
-              "
-            >
-              Start Project
-            </button>
+              ">
+                Start Project
+              </button>
+            </Link>
           </div>
         </div>
       )}
