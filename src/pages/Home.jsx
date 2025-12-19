@@ -54,7 +54,13 @@ const projects = [
       {/* ===========================
           HERO
       ============================ */}
-      <section className="w-full min-h-screen flex items-center justify-center px-6 py-24">
+<section className="
+  w-full
+  flex items-center justify-center
+  px-6
+  pt-24 pb-12
+  lg:min-h-screen
+">
         <div
           className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-14
                 order-first lg:order-none"
@@ -62,7 +68,7 @@ const projects = [
           {/* LEFT – TEXT */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }} 
             transition={{ duration: 0.7 }}
             className="space-y-10"
           >
@@ -150,7 +156,7 @@ PashGen develops high-performance websites and full-stack applications using Rea
       {/* ===========================
           SERVICES
       ============================ */}
-      <section className="w-full py-20 border-t border-white/5 px-6">
+<section className="w-full pt-16 pb-20 border-t border-white/5 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>

@@ -2,10 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-     <link rel="icon" type="image/png" href="/PashLogo.png" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- ✅ FAVICON (Google Search ke liye correct) -->
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+
+    <!-- ❌ REMOVE THIS (Google confuse hota hai) -->
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PashGen</title>
+
+    <!-- ✅ TITLE -->
+    <title>PashGen – React & Next.js Website Development</title>
+
+    <!-- ✅ ORGANIZATION LOGO SCHEMA (VERY IMPORTANT) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "PashGen",
+      "url": "https://pashgen.com",
+      "logo": "https://pashgen.com/favicon.png"
+    }
+    </script>
+
   </head>
   <body>
     <div id="root"></div>
