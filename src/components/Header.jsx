@@ -21,7 +21,7 @@ export default function Header() {
       h-[72px]
     ">
       <div className="
-        max-w-7xl mx-auto h-full
+        max-w-6xl mx-auto h-full
         px-6 flex items-center justify-between
       ">
         {/* LOGO */}
