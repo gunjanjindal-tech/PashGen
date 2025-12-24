@@ -21,8 +21,8 @@ export default function Header() {
       h-[72px]
     ">
       <div className="
-        max-w-6xl mx-auto h-full
-        px-6 flex items-center justify-between
+        max-w-7xl mx-auto h-full
+        px-[20px] flex items-center justify-between
       ">
         {/* LOGO */}
         <Link to="/" className="flex items-center gap-2 text-2xl font-semibold">
