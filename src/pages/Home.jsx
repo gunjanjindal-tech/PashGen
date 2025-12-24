@@ -157,7 +157,7 @@ PashGen develops high-performance websites and full-stack applications using Rea
           SERVICES
       ============================ */}
 <section className="w-full pt-16 pb-20 border-t border-white/5 px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
               <p className="text-sm tracking-[0.3em] uppercase text-[#FFB366]">
@@ -223,7 +223,7 @@ PashGen develops high-performance websites and full-stack applications using Rea
           TECHNOLOGY STACK
       ============================ */}
       <section className="w-full py-20 px-6 border-t border-white/5">
-        <div className="max-w-6xl mx-auto space-y-8">
+        <div className="max-w-7xl mx-auto space-y-8">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
               <p className="text-sm tracking-[0.3em] uppercase text-[#FFB366]">
@@ -275,7 +275,7 @@ PashGen develops high-performance websites and full-stack applications using Rea
           PROCESS
       ============================ */}
       <section className="w-full py-20 px-6 border-t border-white/5">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
               <p className="text-sm tracking-[0.3em] uppercase text-[#FFB366]">
@@ -342,7 +342,7 @@ PashGen develops high-performance websites and full-stack applications using Rea
           INDUSTRIES & PROJECTS
       ============================ */}
       <section className="w-full py-20 px-6 border-t border-white/5">
-        <div className="max-w-6xl mx-auto space-y-16">
+        <div className="max-w-7xl mx-auto space-y-16">
           {/* Industries */}
           <div>
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
@@ -391,7 +391,7 @@ PashGen develops high-performance websites and full-stack applications using Rea
     DEVELOPMENT PRINCIPLES (LIKE INDUSTRIES)
 =========================== */}
 <section className="w-full py-20 px-6 border-t border-white/5">
-  <div className="max-w-6xl mx-auto space-y-12">
+  <div className="max-w-7xl mx-auto space-y-12">
 
     {/* TOP ROW — LEFT HEADING + RIGHT DESCRIPTION */}
     <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
@@ -463,7 +463,7 @@ PashGen develops high-performance websites and full-stack applications using Rea
           WHY PashGen + CTA
       ============================ */}
       <section className="w-full pb-20 px-6">
-        <div className="max-w-6xl mx-auto space-y-12">
+        <div className="max-w-7xl mx-auto space-y-12">
           {/* Why PashGen */}
           <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-10">
             <div>
@@ -536,4 +536,3 @@ PashGen develops high-performance websites and full-stack applications using Rea
       </>
   );
 }
-      
