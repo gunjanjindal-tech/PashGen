@@ -17,13 +17,15 @@ export default function Header() {
     <header className="
       fixed top-0 left-0 w-full z-50
       bg-black/80 backdrop-blur-md
-      border-b border-white/5
+      border-b border-white/5 
       h-[72px]
     ">
-      <div className="
-        max-w-7xl mx-auto h-full
-        px-[20px] flex items-center justify-between
-      ">
+<div className="
+  h-full max-w-[1320px] w-full mx-auto
+  px-6 lg:px-4
+  flex items-center justify-between
+">
+
         {/* LOGO */}
         <Link to="/" className="flex items-center gap-2 text-2xl font-semibold">
           <img src="/favicon.png" className="w-8 h-8" />

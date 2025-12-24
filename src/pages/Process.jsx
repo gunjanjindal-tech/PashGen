@@ -77,7 +77,7 @@ export default function Process() {
 
     
     <div className="w-full bg-black text-white pt-32 px-6 pb-24">
-      <div className="max-w-6xl mx-auto space-y-24">
+      <div className="max-w-7xl mx-auto space-y-24">
 
         {/* ===============================
             PAGE HEADER

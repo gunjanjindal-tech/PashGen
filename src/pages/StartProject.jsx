@@ -109,7 +109,7 @@ export default function StartProject() {
 
 
     <div className="w-full bg-black text-white pt-32 px-6 pb-24">
-      <div className="max-w-5xl mx-auto space-y-16">
+      <div className="max-w-6xl mx-auto space-y-16">
 
         {/* HEADER */}
         <motion.div
