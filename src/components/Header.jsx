@@ -28,7 +28,7 @@ export default function Header() {
 
         {/* LOGO */}
         <Link to="/" className="flex items-center gap-2 text-2xl font-semibold">
-          <img src="/favicon.png" className="w-8 h-8" />
+          <img src="/pashgen-title-removebg-preview.png" className="w-10 h-10" />
           <span>
             <span className="text-white">Pash</span>
             <span className="text-[#FF7B00]">Gen</span>
