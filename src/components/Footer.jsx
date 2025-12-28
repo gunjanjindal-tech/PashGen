@@ -20,18 +20,32 @@ export default function Footer() {
           </p>
 
           {/* SOCIAL ICONS */}
-          <div className="flex gap-3 pt-1">
-            {[Instagram, Linkedin, Facebook].map((Icon, idx) => (
-              <a
-                key={idx}
-                href="#"
-                className="p-2 rounded-full border border-[#262626]
-                           hover:border-[#FF7B00] hover:text-[#FF7B00]
-                           transition flex items-center justify-center"
-              >
-                <Icon size={16} className="text-gray-300" />
-              </a>
-            ))}
+          <div className="flex gap-4 pt-2">
+            <a
+              href="https://www.instagram.com/_pashgen/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                p-2 rounded-full border border-[#262626]
+                hover:border-[#FF7B00] hover:text-[#FF7B00]
+                transition flex items-center justify-center
+              "
+            >
+              <Instagram size={17} className="text-gray-300" />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/company/pashgen"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                p-2 rounded-full border border-[#262626]
+                hover:border-[#FF7B00] hover:text-[#FF7B00]
+                transition flex items-center justify-center
+              "
+            >
+              <Linkedin size={17} className="text-gray-300" />
+            </a>
           </div>
         </div>
 
